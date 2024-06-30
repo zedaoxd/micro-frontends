@@ -1,0 +1,24 @@
+#drawer-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+
+  h2 {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#drawer-list-links {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}

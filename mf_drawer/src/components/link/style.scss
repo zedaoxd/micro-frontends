@@ -1,0 +1,26 @@
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgb(250, 93, 93);
+    color: #fff;
+  }
+
+  &.active {
+    background-color: rgb(250, 93, 93);
+    color: #fff;
+  }
+
+  span {
+    background-color: rgb(201, 26, 26);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+  }
+}
