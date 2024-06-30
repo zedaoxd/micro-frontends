@@ -6,10 +6,6 @@ services:
     container_name: mf_container
     ports:
       - "3000:3000"
-    volumes:
-      - ./mf_container:/app
-    networks:
-      - teste_2024
 
   mf_drawer:
     build:
@@ -18,10 +14,6 @@ services:
     container_name: mf_drawer
     ports:
       - "3002:3002"
-    volumes:
-      - ./mf_drawer:/app
-    networks:
-      - teste_2024
 
   mf_videos:
     build:
@@ -30,10 +22,6 @@ services:
     container_name: mf_videos
     ports:
       - "3001:3001"
-    volumes:
-      - ./mf_videos:/app
-    networks:
-      - teste_2024
 
   bff:
     build:
@@ -42,11 +30,3 @@ services:
     container_name: bff
     ports:
       - "4000:4000"
-    volumes:
-      - ./bff:/app
-    networks:
-      - teste_2024
-
-networks:
-  teste_2024:
-    driver: bridge
