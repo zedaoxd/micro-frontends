@@ -1,0 +1,87 @@
+.card-video {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+
+  .card-video-thumb-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+  }
+
+  .card-video__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 1s ease;
+  }
+
+  .card-video__content {
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    .card-video__title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .pulse span {
+    background-color: red;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  &:hover:not(:hover .modal-container) {
+    .card-video__img {
+      transform: scale(1.2) rotate(2deg);
+    }
+
+    .pulse span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      opacity: 0.8;
+      animation: pulse 2s ease-in-out infinite;
+      animation-delay: calc(0.5s * var(--i));
+    }
+
+    @keyframes pulse {
+      100% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+  }
+}
