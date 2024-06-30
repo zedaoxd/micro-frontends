@@ -52,11 +52,17 @@ git clone https://github.com/zedaoxd/micro-frontends.git
 # entre na pasta do bff
 cd micro-frontends/bff
 
+# rode as migrations
+npx prisma migrate dev --name init
+
 # rode o bff com o comando (disponível em localhost://4000)
 npm run start:dev
 
 # entre na pasta do MF Drawer
 cd ../mf_drawer
+
+# instale as dependencias
+npm i
 
 # rode o MFDrawer com o comando (disponível em localhost://3002)
 npm run dev
@@ -64,11 +70,17 @@ npm run dev
 # entre na pasta do MF Videos
 cd ../mf_videos
 
+# instale as dependencias
+npm i
+
 # rode o MFVideos com o comando (disponível em localhost://3001)
 npm run dev
 
 # por fim entre na pasta do container
 cd ../mf_container
+
+# instale as dependencias
+npm i
 
 # e rode com o comando (disponível em localhost://3000)
 npm run dev
