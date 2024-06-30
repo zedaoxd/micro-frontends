@@ -68,7 +68,7 @@ cd ../mf_videos
 npm run dev
 
 # por fim entre na pasta do container
-cd .. mf_container
+cd ../mf_container
 
 # e rode com o comando (disponível em localhost://3000)
 npm run dev
