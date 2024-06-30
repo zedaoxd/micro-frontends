@@ -1,0 +1,27 @@
+#bff-main-container {
+  display: flex;
+
+  #mf-drawer-root {
+    width: 200px;
+  }
+
+  #mf-video-root {
+    flex: 1;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    gap: 150px;
+
+    #mf-drawer-root {
+      width: 100%;
+      height: auto;
+      z-index: 1;
+    }
+
+    #mf-video-root {
+      flex: 1;
+      height: auto;
+    }
+  }
+}
